@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import { Toaster } from "react-hot-toast";
+import ToasterProvider from "./components/ToasterProvider";
 
 export const metadata: Metadata = {
   title: "German Mechatronics | Premium Automotive Service",
@@ -35,17 +35,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <Toaster
-          position="bottom-right"
-          toastOptions={{
-            style: {
-              background: "#1A1A1A",
-              color: "#F5F5F5",
-              border: "1px solid #C9A84C",
-              borderRadius: "2px",
-            },
-          }}
-        />
+        <ToasterProvider />
       </body>
     </html>
   );

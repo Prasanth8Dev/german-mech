@@ -30,32 +30,32 @@ export const CARS = [
 ];
 
 export const PARTS = [
-  { id: 1, brand: "BMW", name: "M Sport Brake Discs", oem: "34116797600", price: "€280", emoji: "⭕" },
-  { id: 2, brand: "Mercedes", name: "AMG Air Filter Set", oem: "A6420940304", price: "€95", emoji: "💨" },
-  { id: 3, brand: "Audi", name: "Quattro CV Joint", oem: "8K0498099B", price: "€340", emoji: "⚙️" },
-  { id: 4, brand: "Porsche", name: "911 Shock Absorber", oem: "99633305702", price: "€520", emoji: "🔩" },
-  { id: 5, brand: "BMW", name: "N54 Turbo Actuator", oem: "11657580549", price: "€420", emoji: "💨" },
-  { id: 6, brand: "Mercedes", name: "W222 Air Strut", oem: "2223209413", price: "€680", emoji: "🔧" },
-  { id: 7, brand: "Audi", name: "RS6 Ceramic Pad Set", oem: "4M0615601S", price: "€195", emoji: "⭕" },
-  { id: 8, brand: "BMW", name: "OBD Sensor Kit", oem: "13627585713", price: "€145", emoji: "📡" },
+  { id: 1, brand: "BMW", name: "M Sport Brake Discs", oem: "34116797600", price: "₹28,500", emoji: "⭕" },
+  { id: 2, brand: "Mercedes", name: "AMG Air Filter Set", oem: "A6420940304", price: "₹9,800", emoji: "💨" },
+  { id: 3, brand: "Audi", name: "Quattro CV Joint", oem: "8K0498099B", price: "₹34,000", emoji: "⚙️" },
+  { id: 4, brand: "Porsche", name: "Cayenne Shock Absorber", oem: "99633305702", price: "₹52,000", emoji: "🔩" },
+  { id: 5, brand: "BMW", name: "N54 Turbo Actuator", oem: "11657580549", price: "₹42,000", emoji: "💨" },
+  { id: 6, brand: "Mercedes", name: "W222 Air Suspension Strut", oem: "2223209413", price: "₹68,000", emoji: "🔧" },
+  { id: 7, brand: "Audi", name: "RS6 Ceramic Pad Set", oem: "4M0615601S", price: "₹19,500", emoji: "⭕" },
+  { id: 8, brand: "BMW", name: "OBD Sensor Kit", oem: "13627585713", price: "₹14,500", emoji: "📡" },
 ];
 
 export const REVIEWS = [
-  { id: 1, name: "Klaus Weber", car: "BMW M3", text: "Absolutely outstanding service. My M3 hasn't felt this good since new. Their diagnostic team found an issue three other workshops missed.", stars: 5, init: "K" },
-  { id: 2, name: "Sophie Müller", car: "Mercedes S-Class", text: "The most professional automotive workshop I've encountered. Every detail was attended to with precision. Worth every euro.", stars: 5, init: "S" },
-  { id: 3, name: "Hans Richter", car: "Audi RS6", text: "Transparent pricing, factory-level quality, and the team explains everything clearly. This is exactly how premium service should feel.", stars: 5, init: "H" },
-  { id: 4, name: "Elena Braun", car: "Porsche 911", text: "I trust German Mechatronics with my 911 and nothing else. Their Porsche knowledge is second to none.", stars: 5, init: "E" },
-  { id: 5, name: "Markus Schmidt", car: "BMW X5", text: "Booked online, dropped off the X5, received live updates, picked it up perfect. Seamless experience from start to finish.", stars: 5, init: "M" },
-  { id: 6, name: "Anna Fischer", car: "Mercedes GLE", text: "Finally a workshop that treats your vehicle as if it were their own. The attention to detail and customer care is exceptional.", stars: 5, init: "A" },
+  { id: 1, name: "Rajesh Kumar", car: "BMW 5 Series", text: "Outstanding service! My BMW 530d was perfectly diagnosed and fixed within a day. The team is knowledgeable and very professional. Best German car specialist in Chennai.", stars: 5, init: "R" },
+  { id: 2, name: "Priya Venkataraman", car: "Mercedes C-Class", text: "Excellent experience from start to finish. Transparent pricing, genuine parts, and the car was returned cleaner than I left it. Highly recommended!", stars: 5, init: "P" },
+  { id: 3, name: "Arun Krishnamurthy", car: "Audi Q7", text: "The only place I trust for my Audi Q7. Factory-level diagnostics, honest advice and no unnecessary upselling. Real experts in German vehicles.", stars: 5, init: "A" },
+  { id: 4, name: "Suresh Natarajan", car: "Porsche Cayenne", text: "Brought my Cayenne here after bad experience elsewhere. German Mechatronics solved a complex suspension issue other workshops couldn't. Worth every rupee.", stars: 5, init: "S" },
+  { id: 5, name: "Kavitha Balasubramanian", car: "BMW X5", text: "Quick turnaround, genuine OEM parts and the staff keep you updated throughout. My X5 drives perfectly now. Very happy with the service.", stars: 5, init: "K" },
+  { id: 6, name: "Dinesh Chandrasekaran", car: "Mercedes E-Class", text: "Premium service at a fair price. The team explained every issue clearly and showed me the worn parts before replacing. Trustworthy and professional.", stars: 5, init: "D" },
 ];
 
 export const FAQS = [
-  { q: "Do you use genuine OEM parts?", a: "Yes. We source genuine OEM parts directly from manufacturer-approved suppliers. We also offer certified aftermarket alternatives where appropriate." },
-  { q: "Will servicing with you void my warranty?", a: "No. EU Block Exemption Regulations allow you to service your vehicle at any qualified workshop without voiding the manufacturer warranty, as long as correct parts and procedures are used." },
-  { q: "How long does a typical service take?", a: "A standard oil change and inspection takes 2–3 hours. More complex services such as transmission work or suspension overhauls may require 1–2 days." },
-  { q: "Do you offer a collection and delivery service?", a: "Yes, we offer a premium collection and delivery service within the Munich area. Please request this when booking your appointment." },
-  { q: "Can I get a loaner car while mine is being serviced?", a: "We maintain a fleet of courtesy vehicles available for bookings expected to exceed one business day. Subject to availability." },
-  { q: "Do you buy used vehicles?", a: "Yes, we assess and purchase quality used luxury vehicles. Contact us with your vehicle details for a professional appraisal." },
+  { q: "Do you use genuine OEM parts?", a: "Yes. We source genuine OEM parts directly from manufacturer-approved distributors in India. We also offer certified aftermarket alternatives where appropriate, and always inform you before using them." },
+  { q: "Which German car brands do you service?", a: "We specialise in BMW, Mercedes-Benz, Audi, Porsche, and Volkswagen. We also service other European luxury brands including Bentley, Lamborghini, and Maserati on request." },
+  { q: "How long does a typical service take?", a: "A standard oil change and inspection takes 2–3 hours. More complex services such as transmission work or suspension overhauls may require 1–2 days. We'll give you an accurate estimate upfront." },
+  { q: "Where are you located in Chennai?", a: "We are located at 10, Vallimayil Market City, Red Hills, Chennai – Naravarikuppam, Tamil Nadu 600052. Easily accessible from Red Hills and the Ponneri highway." },
+  { q: "Do you provide vehicle engine diagnostics?", a: "Yes. We use advanced OBD-II and factory-level diagnostic equipment specific to German vehicles to accurately identify engine faults, electrical issues, and ECU errors." },
+  { q: "Do you buy used luxury cars?", a: "Yes, we assess and purchase quality used German luxury vehicles. Call us at 099401 55888 or WhatsApp us with your vehicle details for a professional appraisal." },
 ];
 
 export const VEHICLE_MODELS: Record<string, string[]> = {
