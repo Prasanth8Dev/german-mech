@@ -41,8 +41,8 @@ export default function Hero() {
     }
 
     const grid = new THREE.GridHelper(20, 20, 0xc9a84c, 0xc9a84c);
-    (grid.material as THREE.Material).opacity = 0.04;
-    (grid.material as THREE.Material).transparent = true;
+    (grid.material as { opacity: number; transparent: boolean }).opacity = 0.04;
+    (grid.material as { opacity: number; transparent: boolean }).transparent = true;
     grid.position.y = -3;
     scene.add(grid);
 
