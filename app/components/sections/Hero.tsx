@@ -75,12 +75,7 @@ export default function Hero() {
     animate();
     }); // end import
 
-    return () => {
-      cancelAnimationFrame(rafId);
-      document.removeEventListener("mousemove", onMouse);
-      window.removeEventListener("resize", onResize);
-      renderer.dispose();
-    };
+    return () => { cancelAnimationFrame(rafId); };
   }, []);
 
   const wordVariants = {

@@ -7,9 +7,6 @@ const nextConfig = {
       { protocol: "https", hostname: "cdn.bmw.com" },
     ],
   },
-  experimental: {
-    optimizeCss: true,
-  },
 };
 
 export default nextConfig;
