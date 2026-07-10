@@ -1,4 +1,5 @@
-import Hero from "./components/sections/Hero";
+import dynamic from "next/dynamic";
+const Hero = dynamic(() => import("./components/sections/Hero"), { ssr: false });
 import BrandsSection from "./components/sections/BrandsSection";
 import ServicesSection from "./components/sections/ServicesSection";
 import BookingSection from "./components/sections/BookingSection";
