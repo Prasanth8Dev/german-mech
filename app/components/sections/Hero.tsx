@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import * as THREE from "three";
+// THREE is loaded dynamically inside useEffect to prevent SSR issues
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -11,6 +11,9 @@ export default function Hero() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    let rafId: number;
+
+    import("three").then((THREE) => {
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -19,7 +22,6 @@ export default function Hero() {
     const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
     camera.position.set(0, 0, 5);
 
-    // Particle field
     const count = 1200;
     const pos = new Float32Array(count * 3);
     for (let i = 0; i < count * 3; i++) pos[i] = (Math.random() - 0.5) * 20;
@@ -29,7 +31,6 @@ export default function Hero() {
     const points = new THREE.Points(geo, mat);
     scene.add(points);
 
-    // Gold rings
     for (let i = 0; i < 3; i++) {
       const rg = new THREE.TorusGeometry(2 + i * 0.8, 0.005 + i * 0.003, 8, 120);
       const rm = new THREE.MeshBasicMaterial({ color: 0xc9a84c, transparent: true, opacity: 0.08 - i * 0.02 });
@@ -39,7 +40,6 @@ export default function Hero() {
       scene.add(ring);
     }
 
-    // Grid
     const grid = new THREE.GridHelper(20, 20, 0xc9a84c, 0xc9a84c);
     (grid.material as THREE.Material).opacity = 0.04;
     (grid.material as THREE.Material).transparent = true;
@@ -60,7 +60,7 @@ export default function Hero() {
     };
     window.addEventListener("resize", onResize);
 
-    let t = 0, rafId: number;
+    let t = 0;
     const animate = () => {
       rafId = requestAnimationFrame(animate);
       t += 0.005;
@@ -73,6 +73,7 @@ export default function Hero() {
       renderer.render(scene, camera);
     };
     animate();
+    }); // end import
 
     return () => {
       cancelAnimationFrame(rafId);
