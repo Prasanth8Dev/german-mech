@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C96A;
+  --gold-dark: #9A7A2E;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #020202;
+  color: #F5F5F5;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--gold); color: #000; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+@layer components {
+  .gold-text { color: var(--gold); }
+  .gold-gradient { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 text-black font-bold text-xs tracking-widest uppercase px-9 py-4 rounded-sm transition-all duration-300;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  }
+  .btn-primary:hover {
+    box-shadow: 0 8px 40px rgba(201,168,76,.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 text-white font-bold text-xs tracking-widest uppercase px-9 py-4 rounded-sm border border-white/30 transition-all duration-300;
+  }
+  .btn-secondary:hover {
+    @apply border-gold text-gold;
+    box-shadow: 0 0 30px rgba(201,168,76,.1);
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-3 mb-5;
+  }
+  .section-label::before {
+    content: '';
+    @apply w-8 h-px bg-gold block;
+  }
+  .section-label span {
+    @apply text-gold text-xs tracking-widest uppercase font-semibold;
+  }
+
+  .gold-line {
+    @apply my-6;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 border border-gold/5;
+  }
+  .card-hover:hover {
+    @apply border-gold/20 -translate-y-1;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  }
+
+  .form-control {
+    @apply w-full bg-white/5 border border-gold/20 text-white px-4 py-3 text-sm font-inter rounded-sm outline-none transition-all duration-300;
+  }
+  .form-control:focus {
+    @apply border-gold;
+    background: rgba(201,168,76,.03);
+    box-shadow: 0 0 0 3px rgba(201,168,76,.08);
+  }
+  .form-label {
+    @apply block text-xs tracking-widest uppercase font-semibold mb-2;
+    color: rgba(201,168,76,.7);
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(1.5); }
+}
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
