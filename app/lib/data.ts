@@ -21,12 +21,12 @@ export const BRANDS = [
 ];
 
 export const CARS = [
-  { id: 1, brand: "BMW", model: "BMW M5 Competition", year: 2022, km: "18,000", fuel: "Petrol", trans: "Automatic", price: "€89,000", badge: "Featured", emoji: "🚗" },
-  { id: 2, brand: "Mercedes", model: "Mercedes C63 AMG", year: 2021, km: "24,500", fuel: "Petrol", trans: "Automatic", price: "€72,500", badge: "Hot Deal", emoji: "🚘" },
-  { id: 3, brand: "Audi", model: "Audi RS6 Avant", year: 2023, km: "9,200", fuel: "Hybrid", trans: "Automatic", price: "€95,000", badge: "New Arrival", emoji: "🚙" },
-  { id: 4, brand: "Porsche", model: "Porsche 911 Carrera", year: 2020, km: "32,000", fuel: "Petrol", trans: "PDK", price: "€105,000", badge: "Premium", emoji: "🏎️" },
-  { id: 5, brand: "BMW", model: "BMW X5 M50i", year: 2022, km: "21,000", fuel: "Petrol", trans: "Automatic", price: "€78,000", badge: "", emoji: "🚗" },
-  { id: 6, brand: "Mercedes", model: "Mercedes S580 4MATIC", year: 2023, km: "6,800", fuel: "Hybrid", trans: "Automatic", price: "€142,000", badge: "Nearly New", emoji: "🚘" },
+  { id: 1, brand: "BMW", model: "BMW 5 Series 530d M Sport", year: 2021, km: "38,000", fuel: "Diesel", trans: "Automatic", price: "₹52,00,000", badge: "Featured", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80", plate: "TN 09 BM 5530" },
+  { id: 2, brand: "Mercedes", model: "Mercedes-Benz C 300d AMG Line", year: 2022, km: "22,000", fuel: "Diesel", trans: "Automatic", price: "₹48,00,000", badge: "Hot Deal", image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80", plate: "TN 09 MB 3000" },
+  { id: 3, brand: "Audi", model: "Audi Q7 45 TDI Premium Plus", year: 2021, km: "41,000", fuel: "Diesel", trans: "Automatic", price: "₹68,00,000", badge: "Family SUV", image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80", plate: "TN 09 AQ 7007" },
+  { id: 4, brand: "Porsche", model: "Porsche Cayenne S Diesel", year: 2019, km: "55,000", fuel: "Diesel", trans: "PDK", price: "₹85,00,000", badge: "Premium", image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80", plate: "TN 09 PC 1911" },
+  { id: 5, brand: "BMW", model: "BMW X5 xDrive30d M Sport", year: 2020, km: "48,000", fuel: "Diesel", trans: "Automatic", price: "₹62,00,000", badge: "", image: "https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800&q=80", plate: "TN 09 BX 5000" },
+  { id: 6, brand: "Mercedes", model: "Mercedes-Benz E 220d Exclusive", year: 2023, km: "12,000", fuel: "Diesel", trans: "Automatic", price: "₹55,00,000", badge: "Nearly New", image: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800&q=80", plate: "TN 09 ME 2230" },
 ];
 
 export const PARTS = [

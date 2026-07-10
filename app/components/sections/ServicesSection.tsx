@@ -5,7 +5,7 @@ import { SERVICES } from "../../lib/data";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 px-[5%] bg-black">
+    <section id="services" className="py-24 px-[5%]" style={{ background:"#fff" }}>
       <div className="text-center mb-18">
         <div className="section-label justify-center"><span>What We Offer</span></div>
         <h2 className="font-playfair text-[clamp(32px,4vw,56px)] font-bold mb-4">
@@ -26,7 +26,8 @@ export default function ServicesSection() {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ delay: i * 0.05, duration: 0.7 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="relative bg-dark-2 p-10 border border-gold/[0.06] cursor-pointer overflow-hidden group"
+            className="relative bg-white p-10 border cursor-pointer overflow-hidden group rounded-sm"
+            style={{ borderColor:"#E8E8E8", boxShadow:"0 2px 10px rgba(0,0,0,.05)" }}
           >
             <div className="absolute top-0 left-0 w-[3px] h-0 group-hover:h-full transition-all duration-500"
               style={{ background: "linear-gradient(to bottom, #C9A84C, transparent)" }} />

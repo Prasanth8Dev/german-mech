@@ -4,7 +4,7 @@ import { BRANDS } from "../../lib/data";
 
 export default function BrandsSection() {
   return (
-    <section id="brands" className="py-24 px-[5%] bg-dark-2 border-t border-b border-gold/[0.08]">
+    <section id="brands" className="py-24 px-[5%]" style={{ background:"#F5F6F8" }}>
       <div className="flex justify-between items-end mb-16 flex-wrap gap-6">
         <div>
           <div className="section-label"><span>Supported Brands</span></div>
@@ -27,7 +27,8 @@ export default function BrandsSection() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ delay: i * 0.08, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             whileHover={{ y: -4 }}
-            className="relative bg-dark-3 p-10 border border-gold/[0.06] cursor-pointer overflow-hidden group"
+            className="relative bg-white p-10 border cursor-pointer overflow-hidden group rounded-sm"
+          style={{ borderColor:"#E8E8E8", boxShadow:"0 2px 10px rgba(0,0,0,.05)", transition:"all .3s" }}
           >
             <div className="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500"
               style={{ background: "linear-gradient(to right, #C9A84C, #E8C96A)" }} />

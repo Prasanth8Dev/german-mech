@@ -8,8 +8,9 @@ const links = [
   { label: "Services", href: "/services" },
   { label: "Luxury Cars", href: "/cars" },
   { label: "Parts", href: "/parts" },
+  { label: "Hours", href: "/#hours" },
   { label: "About", href: "/#about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -28,19 +29,21 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-[5%] transition-all duration-400 ${
+        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-[5%] transition-all duration-300 ${
           scrolled
-            ? "bg-black/95 backdrop-blur-xl border-b border-gold/10 h-[60px]"
-            : "h-[72px]"
+            ? "bg-white shadow-md h-[60px]"
+            : "bg-transparent h-[72px]"
         }`}
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 no-underline">
-          <div className="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center text-gold font-rajdhani font-bold text-sm tracking-wider">
+          <div className="w-10 h-10 rounded-full border-2 flex items-center justify-center font-rajdhani font-bold text-sm tracking-wider"
+            style={{ borderColor:"#DD0000", color:"#DD0000" }}>
             GM
           </div>
-          <span className="font-rajdhani font-bold text-[18px] tracking-[2px] uppercase text-white">
-            <span className="text-gold">German</span> Mechatronics
+          <span className="font-rajdhani font-bold text-[18px] tracking-[2px] uppercase"
+            style={{ color: scrolled ? "#111" : "#fff" }}>
+            <span style={{ color:"#DD0000" }}>German</span> Mechatronics
           </span>
         </Link>
 
@@ -50,10 +53,12 @@ export default function Navbar() {
             <li key={l.label}>
               <Link
                 href={l.href}
-                className="text-white/70 text-xs tracking-[1.5px] uppercase font-medium hover:text-gold transition-colors relative group no-underline"
+                className="text-xs tracking-[1.5px] uppercase font-medium transition-colors relative group no-underline hover:text-red-600"
+                style={{ color: scrolled ? "#555" : "rgba(255,255,255,.75)" }}
               >
                 {l.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px group-hover:w-full transition-all duration-300"
+                  style={{ background:"#DD0000" }} />
               </Link>
             </li>
           ))}

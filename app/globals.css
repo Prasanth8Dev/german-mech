@@ -5,96 +5,155 @@
 @tailwind utilities;
 
 :root {
-  --gold: #C9A84C;
-  --gold-light: #E8C96A;
-  --gold-dark: #9A7A2E;
+  --red: #DD0000;
+  --red-light: #FF2222;
+  --red-dark: #AA0000;
+  --german-gold: #FFCE00;
+  --bg: #FFFFFF;
+  --bg-alt: #F5F6F8;
+  --bg-card: #FFFFFF;
+  --border: #E8E8E8;
+  --text: #111111;
+  --text-muted: #666666;
+  --text-light: #999999;
+  --nav-bg: rgba(255,255,255,0.95);
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body {
-  background: #020202;
-  color: #F5F5F5;
+  background: var(--bg);
+  color: var(--text);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
 
-::selection { background: var(--gold); color: #000; }
-
+::selection { background: var(--red); color: #fff; }
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #0a0a0a; }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+::-webkit-scrollbar-track { background: #f0f0f0; }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
 
 @layer components {
-  .gold-text { color: var(--gold); }
-  .gold-gradient { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); }
-
   .btn-primary {
-    @apply inline-flex items-center gap-2 text-black font-bold text-xs tracking-widest uppercase px-9 py-4 rounded-sm transition-all duration-300;
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    @apply inline-flex items-center gap-2 text-white font-bold text-xs tracking-widest uppercase px-8 py-4 rounded-sm transition-all duration-300 cursor-pointer border-0;
+    background: linear-gradient(135deg, var(--red), var(--red-dark));
   }
   .btn-primary:hover {
-    box-shadow: 0 8px 40px rgba(201,168,76,.5);
+    box-shadow: 0 8px 30px rgba(221,0,0,.35);
     transform: translateY(-2px);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 text-white font-bold text-xs tracking-widest uppercase px-9 py-4 rounded-sm border border-white/30 transition-all duration-300;
+    @apply inline-flex items-center gap-2 font-bold text-xs tracking-widest uppercase px-8 py-4 rounded-sm border transition-all duration-300 no-underline;
+    color: var(--text);
+    border-color: var(--border);
+    background: transparent;
   }
   .btn-secondary:hover {
-    @apply border-gold text-gold;
-    box-shadow: 0 0 30px rgba(201,168,76,.1);
+    border-color: var(--red);
+    color: var(--red);
   }
 
   .section-label {
-    @apply inline-flex items-center gap-3 mb-5;
+    @apply inline-flex items-center gap-3 mb-4;
   }
   .section-label::before {
     content: '';
-    @apply w-8 h-px bg-gold block;
+    @apply block h-px bg-red-600;
+    width: 30px;
+    background: var(--red);
   }
   .section-label span {
-    @apply text-gold text-xs tracking-widest uppercase font-semibold;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 600;
   }
 
-  .gold-line {
-    @apply my-6;
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text);
+  }
+  .section-title .red { color: var(--red); }
+  .section-title .gold { color: var(--german-gold); }
+
+  .red-line {
     width: 60px;
-    height: 2px;
-    background: linear-gradient(to right, var(--gold), transparent);
+    height: 3px;
+    margin: 20px 0;
+    background: linear-gradient(to right, var(--red), transparent);
   }
 
-  .card-hover {
-    @apply transition-all duration-300 border border-gold/5;
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.3s ease;
   }
-  .card-hover:hover {
-    @apply border-gold/20 -translate-y-1;
-    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  .card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,.1);
+    transform: translateY(-3px);
+    border-color: rgba(221,0,0,.2);
   }
 
   .form-control {
-    @apply w-full bg-white/5 border border-gold/20 text-white px-4 py-3 text-sm font-inter rounded-sm outline-none transition-all duration-300;
+    @apply w-full px-4 py-3 text-sm outline-none rounded-sm transition-all duration-200;
+    background: var(--bg-alt);
+    border: 1.5px solid var(--border);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
   }
   .form-control:focus {
-    @apply border-gold;
-    background: rgba(201,168,76,.03);
-    box-shadow: 0 0 0 3px rgba(201,168,76,.08);
+    border-color: var(--red);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(221,0,0,.08);
   }
   .form-label {
-    @apply block text-xs tracking-widest uppercase font-semibold mb-2;
-    color: rgba(201,168,76,.7);
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-muted);
   }
+
+  .section-light { background: var(--bg); }
+  .section-alt { background: var(--bg-alt); }
+  .section-dark {
+    background: #111111;
+    color: #F5F5F5;
+  }
+  .section-dark .section-title { color: #F5F5F5; }
+  .section-dark .section-desc { color: rgba(245,245,245,.6); }
 }
 
-@keyframes pulse-gold {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: .5; transform: scale(1.5); }
+/* Flag stripe */
+.flag-stripe { display: flex; height: 4px; width: 100%; }
+.flag-stripe .s1 { flex:1; background:#222; }
+.flag-stripe .s2 { flex:1; background: var(--red); }
+.flag-stripe .s3 { flex:1; background: var(--german-gold); }
+
+.germany-divider { display:flex; height:3px; width:100%; }
+.germany-divider .d1 { flex:1; background:#ddd; }
+.germany-divider .d2 { flex:1; background: var(--red); }
+.germany-divider .d3 { flex:1; background: var(--german-gold); }
+
+@keyframes pulse-red {
+  0%, 100% { opacity:1; transform:scale(1); }
+  50% { opacity:.5; transform:scale(1.5); }
 }
 @keyframes scrollLine {
-  0% { transform: scaleY(0); transform-origin: top; }
-  50% { transform: scaleY(1); transform-origin: top; }
-  51% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
+  0% { transform:scaleY(0); transform-origin:top; }
+  50% { transform:scaleY(1); transform-origin:top; }
+  51% { transform:scaleY(1); transform-origin:bottom; }
+  100% { transform:scaleY(0); transform-origin:bottom; }
+}
+@keyframes carSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
